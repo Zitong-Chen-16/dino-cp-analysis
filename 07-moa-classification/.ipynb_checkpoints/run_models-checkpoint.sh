@@ -6,19 +6,18 @@
 #     2. Using DINO features
 #     3. Using CNN features
 
-cp_data_dir="../../2.data_split/model_data/cp/"
+cp_data_dir="../../model_data/"
 
-model_pred_dir_cellpro="../../Final_cellprofiler_v3/"
+model_pred_dir_cellpro="../../prediction/cellprofiler/"
 file_indicator_cellpro="_cellprofiler_final"
 
-model_pred_dir_dino="../../Final_dino_v3/"
+model_pred_dir_dino="../../prediction/dino/"
 file_indicator_dino="_dino_final"
 
-model_pred_dir_cnn="../../Final_cnn_v3/"
+model_pred_dir_cnn="../../prediction/cnn/"
 file_indicator_cnn="_CNN_final"
 
-cd ..
-cd 3.moa_prediction_models_new/resnet_models_moa_prediction
+cd resnet_models_moa_prediction
 
 python cp_resnet_train_pred.py --data_dir $cp_data_dir --feat_type "cellprofiler" --model_pred_dir $model_pred_dir_cellpro --file_indicator $file_indicator_cellpro
 
